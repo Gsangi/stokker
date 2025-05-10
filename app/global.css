@@ -1,0 +1,9 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --page-max-width-margins: max(12px, calc((100vw - 900px) / 2));
+}

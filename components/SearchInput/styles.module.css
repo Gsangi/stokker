@@ -1,0 +1,117 @@
+.search-input:not(.search-input-open) {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border-radius: 9999px;
+    background-color: #331f14;
+    font-size: 0.8em;
+    color: white;
+    cursor: pointer;
+    width: max(50%, 500px);
+    overflow: visible;
+}
+
+.search-input input {
+    all: unset;
+}
+
+.search-list {
+
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-button img {
+    height: 16px;
+}
+
+.search-button span {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.707);
+}
+
+/* ...other styles from your CSS module */
+
+.search-loading { 
+    margin-top: 4px;
+    font-size: 0.8em;
+    color: rgba(255,255,255,0.7); 
+}
+
+.search-results {
+    position: absolute;
+    top: calc(100% + 8px); /* Adjust top offset if needed */
+    left: 0; 
+    right: 0; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 8px 0;
+    max-height: 200px; /* Set suitable max-height */
+    overflow-y: auto; 
+    z-index: 1; /* Ensure list renders above other elements */
+}
+
+.search-result-item { 
+    padding: 8px 16px; /* Adjust padding */
+    cursor: pointer; 
+}
+
+.search-result-item:hover { 
+    background-color: #f0f0f0;
+}
+
+.search-no-results { 
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* ... other styles from your CSS module */
+
+.search-input.search-input-open { 
+    /* ...existing styles */
+    border-radius: 30px; /* Increased rounded corners */
+}
+
+.search-input input {
+    all: unset; 
+    background-color: transparent; /* Remove default background */
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Soft border */
+    border-radius: 30px;
+    padding: 8px 16px; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.search-input input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #80bdff; /* Or your desired focus color */
+}
+
+.search-input .clear-button { 
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.search-input.has-text .clear-button { 
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.search-results { 
+    /* ...existing styles */
+    overflow-y: auto; 
+}
+
+.search-result-item:hover {
+    background-color: #0070f3; /* Or preferred highlight */
+    color: white;
+}
+
+/* ... rest of your styles */

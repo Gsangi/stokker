@@ -1,0 +1,121 @@
+.top-container {
+  margin-inline: var(--page-max-width-margins);
+}
+
+.toggle-stocks {
+  display: flex;
+  gap: 12px;
+  margin-block: 64px 36px;
+}
+
+.toggle-stocks>label {
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-stocks>label::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  background-color: #AB643E;
+  transform-origin: bottom right;
+  transition: all 0.25s ease-out;
+}
+
+.toggle-stocks>label:hover::after {
+  background-color: #834e31;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.toggle-stocks>label:has(input:checked)::after {
+  height: 3px;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.top-stock-container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+}
+
+.stock-card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  box-shadow: 0px 0px 0px 1px rgb(218, 218, 218),0px 0px 0px rgba(0, 0, 0, 0.103);
+  transition: all 0.1s linear;
+  border-radius: 4px;
+  min-width: 136px;
+  cursor: pointer;
+}
+
+.stock-card:hover {
+  box-shadow: 0px 0px 0px 1px rgb(218, 218, 218), 0px 2px 4px rgba(0, 0, 0, 0.103);
+}
+
+.stock-card>.stock-symbol {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 0.5px solid black;
+}
+
+.stock-card>span {
+  margin-bottom: 6px;
+  font-size: 1.2em;
+  font-weight: 700px;
+  color: rgb(47, 47, 47);
+}
+
+.stock-card>p:first-of-type {
+  color: #898381;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stock-card>p:last-child {
+  position: relative;
+  font-size: 0.7em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stock-card>p:last-child[data-diff="1"] {
+  color: #569153;
+}
+
+.stock-card>p:last-child[data-diff="1"]::after {
+  transform: rotate(180deg);
+}
+
+.stock-card>p:last-child::after {
+  --size: 6px;
+  box-sizing: border-box;
+  content: "";
+  height: var(--size);
+  width: calc(2*var(--size));
+  border-top-width: var(--size);
+  border-bottom-width: 0px;
+  border-right-width: var(--size);
+  border-left-width: var(--size);
+  border-style: solid;
+  border-top-color: currentColor;
+  border-bottom-color: rgba(56, 56, 56, 0);
+  border-right-color: rgba(56, 56, 56, 0);
+  border-left-color: rgba(56, 56, 56, 0);
+  vertical-align: middle;
+}
+
+.stock-card>p:last-child[data-diff="-1"] {
+  color: #d82c2c;
+}
