@@ -1,13 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "./page.module.css";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import topGainerLosers from "../sample/topGainerLosers.json";
 
 export const TAB_ITEMS_MAP = [
@@ -21,7 +16,7 @@ export const TAB_ITEMS_MAP = [
   },
 ];
 
-export default function Home() {
+function HomeContent() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -79,5 +74,13 @@ export default function Home() {
         })}
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }

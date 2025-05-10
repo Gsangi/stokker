@@ -1,164 +1,173 @@
 .main {
-    margin-inline: var(--page-max-width-margins);
+  margin-inline: var(--page-max-width-margins);
 }
 
 .company-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-block: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-block: 32px;
 }
 
-.company-header .company-details {}
+.company-header .company-details {
+}
 
 .company-header .company-details h4 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: black;
-    font-weight: 500;
-    margin-bottom: 6px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .company-header .company-details p {
-    font-size: 0.9em;
-    color: rgb(88, 88, 88);
-    font-weight: 500;
+  font-size: 0.9em;
+  color: rgb(88, 88, 88);
+  font-weight: 500;
 }
 
 .company-header .company-price p {
-    font-size: 0.9em;
-    color: #000;
-    font-weight: 500;
+  font-size: 0.9em;
+  color: #000;
+  font-weight: 500;
 }
 
 .company-tracker {
-    box-shadow: 0px 0px 0px 1px rgb(200, 200, 200);
-    border-radius: 8px;
-    margin-bottom: 28px;
-    padding: 16px 24px;
-    display: flex;
-    flex-direction: column;    
-    gap: 24px;
+  box-shadow: 0px 0px 0px 1px rgb(200, 200, 200);
+  border-radius: 8px;
+  margin-bottom: 28px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .company-tracker .company-tracker-timeline-radio {
-    align-self: center;
+  align-self: center;
 }
 
 .company-extras {
-    border-radius: 8px;
-    box-shadow: 0px 0px 0px 1px rgb(200, 200, 200);
-    margin-bottom: 64px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 1px rgb(200, 200, 200);
+  margin-bottom: 64px;
 }
 
-.company-extras>header {
-    padding: 12px 24px;
-    font-size: 0.8em;
-    color: black;
-    font-weight: 500;
+.company-extras > header {
+  padding: 12px 24px;
+  font-size: 0.8em;
+  color: black;
+  font-weight: 500;
 }
 
-.company-extras>header span {
-    text-transform: uppercase;
+.company-extras > header span {
+  text-transform: uppercase;
 }
 
-.company-extras>div {
-    border-top: 1px solid rgb(200, 200, 200);
-    padding: 12px 24px;
+.company-extras > div {
+  border-top: 1px solid rgb(200, 200, 200);
+  padding: 12px 24px;
 }
 
-.company-extras>div>p {
-    font-size: 0.8em;
-    color: rgb(88, 88, 88);
-    font-weight: 500;
-    margin-bottom: 24px;
+.company-extras > div > p {
+  font-size: 0.8em;
+  color: rgb(88, 88, 88);
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
-.company-extras>div>span {
-    display: inline-block;
-    background-color: #EDD4C6;
-    color: #AB643E;
-    padding: 8px;
-    border-radius: 999999px;
-    text-transform: capitalize;
-    font-size: 0.8em;
-    font-weight: 500;
-    margin-inline-end: 24px;
-    margin-bottom: 32px;
+.company-extras > div > span {
+  display: inline-block;
+  background-color: #edd4c6;
+  color: #ab643e;
+  padding: 8px;
+  border-radius: 999999px;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-inline-end: 24px;
+  margin-bottom: 32px;
 }
 
-.company-extras>div .company-52-week {
-    margin-bottom: 64px;
-    display: flex;
-    gap: 24px;
+.company-extras > div .company-52-week {
+  margin-bottom: 64px;
+  display: flex;
+  gap: 24px;
 }
 
-.company-extras>div .company-52-week .company-52-range-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: end;
-    position: relative;
+.company-extras > div .company-52-week .company-52-range-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
 }
 
-.company-extras>div .company-52-week .company-52-range-container hr {
-    border-width: 2px;
-    border-color: rgb(200, 200, 200);
-    border-radius: 9999px;
-    border-style: solid;
+.company-extras > div .company-52-week .company-52-range-container hr {
+  border-width: 2px;
+  border-color: rgb(200, 200, 200);
+  border-radius: 9999px;
+  border-style: solid;
 }
 
-.company-extras>div .company-52-week .company-52-range-container .company-52-range-current-price {
-    position: absolute;
-    font-size: 0.81em;
-    color: rgb(123, 123, 123);
-    font-weight: 500;
-    bottom: 16px;
-    text-align: center;
-    transform: translateX(-50%);
-    white-space: nowrap;
+.company-extras
+  > div
+  .company-52-week
+  .company-52-range-container
+  .company-52-range-current-price {
+  position: absolute;
+  font-size: 0.81em;
+  color: rgb(123, 123, 123);
+  font-weight: 500;
+  bottom: 16px;
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
-.company-extras>div .company-52-week .company-52-range-container .company-52-range-current-price::after {
-    --size: 6px;
-    box-sizing: border-box;
-    content: "";
-    position: absolute;
-    height: var(--size);
-    width: calc(2*var(--size));
-    border-top-width: var(--size);
-    border-bottom-width: 0px;
-    border-right-width: var(--size);
-    border-left-width: var(--size);
-    border-style: solid;
-    border-top-color: rgb(68, 68, 68);
-    border-bottom-color: rgba(56, 56, 56, 0);
-    border-right-color: rgba(56, 56, 56, 0);
-    border-left-color: rgba(56, 56, 56, 0);
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
+.company-extras
+  > div
+  .company-52-week
+  .company-52-range-container
+  .company-52-range-current-price::after {
+  --size: 6px;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  height: var(--size);
+  width: calc(2 * var(--size));
+  border-top-width: var(--size);
+  border-bottom-width: 0px;
+  border-right-width: var(--size);
+  border-left-width: var(--size);
+  border-style: solid;
+  border-top-color: rgb(68, 68, 68);
+  border-bottom-color: rgba(56, 56, 56, 0);
+  border-right-color: rgba(56, 56, 56, 0);
+  border-left-color: rgba(56, 56, 56, 0);
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.company-extras>div .company-extra-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.company-extras > div .company-extra-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .company-extras .company-extra {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .company-extras .company-extra span:first-child {
-    color: rgb(123, 123, 123);
-    font-weight: 500;
-    margin-bottom: 4px;
-    display: inline-block;
+  color: rgb(123, 123, 123);
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: inline-block;
 }
 
 .company-extras .company-extra span:last-child {
-    color: rgb(56, 56, 56);
-    font-weight: 600;
+  color: rgb(56, 56, 56);
+  font-weight: 600;
 }
